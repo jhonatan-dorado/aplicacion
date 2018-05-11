@@ -1,0 +1,35 @@
+<!--
+  Generated template for the TablaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content>
+    <button ion-button (click)="estadisticas()">graficar</button>
+    <ion-scroll id="s" scrollX="true" scrollY="true">
+     
+
+    <table class="td">
+        <thead>
+          <th ><ion-item no-lines class="campos" ><ion-img class="icono" src="./../assets/imgs/icono/profundidad.png"></ion-img> profundidad</ion-item></th>
+          <th ><ion-item no-lines class="campos" ><ion-icon name="thermometer"></ion-icon> turbidez</ion-item></th>
+          <th ><ion-item no-lines class="campos" ><ion-img class="icono" src="./../assets/imgs/icono/profundidad.png"></ion-img> temperatura </ion-item></th>
+          <th ><ion-item no-lines class="campos" ><ion-img class="icono" src="./../assets/imgs/icono/profundidad.png"></ion-img> caudal</ion-item></th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dato of Datos " >
+            <td ><ion-item no-lines class="campos">{{dato.profundidad}}</ion-item></td>
+            <td ><ion-item no-lines class="campos">{{dato.turbidez}}</ion-item></td>
+            <td ><ion-item no-lines class="campos">{{dato.temperatura}}</ion-item></td>
+            <td ><ion-item no-lines class="campos">{{dato.caudal}}</ion-item></td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-scroll>
+   
+  
+   
+</ion-content>
